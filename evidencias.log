@@ -1,0 +1,30 @@
+Script started on 2026-08-28 17:45:42-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="19"]
+Fri Aug 28 17:45:42 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ git pushcommit -m "Implementação de uma biblioteca com struct de argumentos e base de funções"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd base_mandelbrot.h[Kcommit -m "Implementação de uma biblioteca com struct de argumentos e base de funções"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K[Kgit pushcommit -m "Implementação de uma biblioteca com struct de argumentos e base de funções"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd base_mandelbrot.h[K[14Pstatus [3Ppushcommit -m "Criação da primeira versão da main"[17Pnfig user.name "JoseMBNeto"mmit -m "Criação da primeira versão da main"push[Kstatus add base_mandelbrot.hcommit -m "Implementação de uma biblioteca com struct de argumentos e base de funções"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K[K[7mgcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c[27m
+[7m./teste_pixels[27m[A]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ gcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c
+./teste_pixels[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ ./teste_pixels
+[?2004lPixel Real 0, 4 = -5.000000
+Pixel Real 3, 4 = -2.750000
+Pixel Imagem 0, 4 = -4.500000
+Pixel Imagem 3, 4 = -2.250000
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 17:46:20-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-28 17:54:34-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="19"]
+Fri Aug 28 17:54:34 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ make log./teste_pixelsgcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ gcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake log[Kgcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgcc -Wall -Wextra -o teste_pixels teste_pixels.c base_mandelbrot.c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmake log[K./teste_pixels
+[?2004lPixel Real 0, 4 = -2.000000
+Pixel Real 3, 4 = 1.000000
+Pixel Imagem 0, 4 = -1.500000
+Pixel Imagem 3, 4 = 1.500000
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-28 17:54:45-03:00 [COMMAND_EXIT_CODE="0"]
