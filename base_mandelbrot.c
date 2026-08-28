@@ -19,3 +19,19 @@ double pixelParaImagem (int linha, int altura){
     double valor = minimo + fracao * (maximo - minimo);
     return valor;
 }
+
+int calculaIteracoes (double cReal, double cImagem, int maxIteracoes){
+    double zReal = 0;
+    double zImagem = 0;
+    int iteracao = 0;
+
+    while (iteracao < maxIteracoes && ((zReal * zReal) + (zImagem * zImagem)) <= 4){
+        double novoReal = (zReal * zReal) - (zImagem * zImagem) + cReal;
+        double novoImagem = 2 * zReal * zImagem + cImagem;
+
+        zReal = novoReal;
+        zImagem = novoImagem;
+        iteracao++;
+    }
+    return iteracao;
+}
