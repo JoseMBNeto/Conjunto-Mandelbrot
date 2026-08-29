@@ -44,3 +44,25 @@ int normaliza (int iteracoes, int maxIteracoes){
     int valorInteiro = (int) valorArredondado;
     return valorInteiro;
 }
+
+int escreverPgm (const char *nomeArquivo, int **matriz, int largura, int altura){
+    FILE *arquivo = fopen(nomeArquivo, "w");
+
+    if (arquivo == NULL){
+        return -1;
+    }
+
+    for (int i = 0; i < altura; i++){
+        for (int j = 0; j < largura; j++){
+            fprintf(arquivo, "%d", matriz[i][j]);
+
+            if (j < largura - 1){
+                fprintf(arquivo, " ");
+            }
+        }
+        fprintf(arquivo, "\n");
+    }
+
+    fclose(arquivo);
+    return 0;
+}
