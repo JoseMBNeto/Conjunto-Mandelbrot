@@ -28,3 +28,18 @@ Pixel Imagem 3, 4 = 1.500000
 [?2004lexit
 
 Script done on 2026-08-28 17:54:45-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-08-29 15:18:17-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="19"]
+Sat Aug 29 15:18:17 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7mgcc -Wall -Wextra -o teste_normaliza teste_normaliza.c base_mandelbrot.c -lm[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc -Wall -Wextra -o teste_normaliza teste_normaliza.c base_mandelbrot.c -lm
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./teste_normaliza[27m./teste_normaliza
+[?2004lnormaliza 0, 100 = 0
+normaliza 100, 100 = 255
+normaliza 50, 100 = 128
+normaliza 25, 100 = 64
+normaliza 1, 50 = 5
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-08-29 15:18:37-03:00 [COMMAND_EXIT_CODE="0"]

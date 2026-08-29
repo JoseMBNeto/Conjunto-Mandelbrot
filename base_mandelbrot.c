@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "base_mandelbrot.h"
 
 double pixelParaReal (int coluna, int largura){
@@ -34,4 +35,12 @@ int calculaIteracoes (double cReal, double cImagem, int maxIteracoes){
         iteracao++;
     }
     return iteracao;
+}
+
+int normaliza (int iteracoes, int maxIteracoes){
+    double fracao = (double) iteracoes / (double) maxIteracoes;
+    double valorQuebrado = fracao * 255;
+    double valorArredondado = round(valorQuebrado);
+    int valorInteiro = (int) valorArredondado;
+    return valorInteiro;
 }
