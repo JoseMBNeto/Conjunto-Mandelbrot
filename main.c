@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "base_mandelbrot.h"
 #include "serial.h"
+#include "openmp.h"
 
 #define LOGIN "jmbn"
 
@@ -46,7 +47,12 @@ int main(int argc, char *argv[]) {
     argumentos.login = LOGIN;
 
     if (rodaSerial(argumentos) != 0){
-        fprintf(stderr, "Não pode fazer a implementacao serial\n");
+        fprintf(stderr, "Nao pode fazer a implementacao serial\n");
+        return 1;
+    }
+
+    if (rodaOpenmp(argumentos) != 0){
+        fprintf(stderr, "Nao pode fazer implementacao openmp\n");
         return 1;
     }
     
