@@ -59,3 +59,20 @@ make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandel
 [?2004lexit
 
 Script done on 2026-08-29 17:05:19-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-01 17:41:36-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="23"]
+Tue Sep  1 17:41:36 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ make mandelbrot 
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot'
+gcc -c main.c
+gcc -c base_mandelbrot.c
+gcc -c serial.c
+gcc -c openmp.c -fopenmp
+gcc main.o base_mandelbrot.o serial.o openmp.o -o mandelbrot -fopenmp
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ ./pro[K[K[Kmandelbrot 6 6 30 3
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-01 17:42:05-03:00 [COMMAND_EXIT_CODE="0"]
