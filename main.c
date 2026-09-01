@@ -3,7 +3,7 @@
 #include "base_mandelbrot.h"
 #include "serial.h"
 #include "openmp.h"
-#include "pthreads1.h"
+#include "pthreads.h"
 
 #define LOGIN "jmbn"
 
@@ -59,6 +59,11 @@ int main(int argc, char *argv[]) {
 
     if (rodaPthreads1(argumentos) != 0){
         fprintf(stderr, "Nao pode fazer implementacao phtreads1\n");
+        return 1;
+    }
+
+    if (rodaPthreads2(argumentos) != 0){
+        fprintf(stderr, "Nao pode fazer implementacao phtreads2\n");
         return 1;
     }
     
