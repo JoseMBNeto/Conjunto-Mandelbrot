@@ -94,3 +94,33 @@ make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandel
 [?2004lexit
 
 Script done on 2026-09-01 19:20:23-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-02 17:17:54-03:00 [COMMAND="date; whoami; pwd; bash" TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="168" LINES="8"]
+Wed Sep  2 17:17:54 -03 2026
+miltonlnx
+/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ make mandelbrot 
+[?2004lmake[1]: Entering directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot'
+gcc -c main.c
+gcc -c base_mandelbrot.c
+gcc -c serial.c
+gcc -c openmp.c -fopenmp
+gcc -c pthreads.c -pthread
+gcc main.o base_mandelbrot.o serial.o openmp.o pthreads.o -o mandelbrot -fopenmp -pthread
+make[1]: Leaving directory '/home/miltonlnx/Infra-SFT/mandelbrot/Conjunto-Mandelbrot'
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot 4 4 50[27m./mandelbrot 4 4 50
+[?2004lDigite uma quantidade válida de valores
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1 99[27m./mandelbrot 4 4 50 1 99
+[?2004lDigite uma quantidade válida de valores
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot[27m./mandelbrot
+[?2004lDigite uma quantidade válida de valores
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot 0 4 50 1[27m./mandelbrot 0 4 50 1
+[?2004lO valor digitado precisa ser positivo e maior que 0
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot -5 4 50 1[27m./mandelbrot -5 4 50 1
+[?2004lO valor digitado precisa ser positivo e maior que 0
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot abc 4 50 1[27m./mandelbrot abc 4 50 1
+[?2004lO valor digitado precisa ser positivo e maior que 0
+[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ [7m./mandelbrot 2000 2000 1000 8[27m./mandelbrot 2000 2000 1000 8
+[?2004l[?2004h]0;miltonlnx@Miltoneto: ~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[01;32mmiltonlnx@Miltoneto[00m:[01;34m~/Infra-SFT/mandelbrot/Conjunto-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-02 17:19:01-03:00 [COMMAND_EXIT_CODE="0"]
