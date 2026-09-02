@@ -41,6 +41,9 @@ void *calculaIntercalado (void *arg){
 }
 
 int rodaPthreads1 (ArgumentosMandel args){
+    struct timespec inicio, fim;
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
+    
     int **matriz = malloc(args.altura * sizeof(int *));
     if (matriz == NULL){
         fprintf (stderr, "Falha ao alocar memoria no Pthread1\n");
@@ -58,8 +61,6 @@ int rodaPthreads1 (ArgumentosMandel args){
     pthread_t thread[args.numeroThreads];
     DadosThread dados[args.numeroThreads];
     int linhasPThread = args.altura / args.numeroThreads;
-    struct timespec inicio, fim;
-    clock_gettime(CLOCK_MONOTONIC, &inicio);
 
     for (int t = 0; t < args.numeroThreads; t++){
         dados[t].linhaInicio = t * linhasPThread;
@@ -107,32 +108,75 @@ int rodaPthreads1 (ArgumentosMandel args){
     return 0;
 }
 
+typedef struct DadosNormalizacao {
+    int **matrizIteracoes;
+    int **matrizFinal;
+    int linhaInicio;
+    int passo;
+    ArgumentosMandel args;
+} DadosNormalizacao;
+
+void *normalizaIntercalado (void *arg){
+    DadosNormalizacao *dados = (DadosNormalizacao *) arg;
+
+    for (int i = dados->linhaInicio; i < dados->args.altura; i += dados->passo){
+        for (int j = 0; j < dados->args.largura; j++){
+            dados->matrizFinal[i][j] = normaliza(dados->matrizIteracoes[i][j], dados->args.maxIteracoes);
+        }
+    }
+    return NULL;
+}
+
 int rodaPthreads2 (ArgumentosMandel args){
+    struct timespec inicio, fim;
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
+
+    int **matrizIteracoes = malloc(args.altura * sizeof(int *));
+    if (matrizIteracoes == NULL){
+        fprintf(stderr, "Falha ao alocar na matrizIteracoes\n");
+        return -1;
+    }
+
+    for (int i = 0; i < args.altura; i++){
+        matrizIteracoes[i] = malloc(args.largura * sizeof(int));
+        if (matrizIteracoes[i] == NULL){
+            fprintf(stderr, "Falha ao alocar na matrizIteracoes\n");
+            return -1;
+        }
+    }
+
     int **matriz = malloc(args.altura * sizeof(int *));
     if (matriz == NULL){
-        fprintf (stderr, "Falha ao alocar memoria no Pthread2\n");
+        fprintf(stderr, "Falha ao alocar na matriz\n");
         return -1;
     }
 
     for (int i = 0; i < args.altura; i++){
         matriz[i] = malloc(args.largura * sizeof(int));
         if (matriz[i] == NULL){
-            fprintf(stderr, "Falha ao alocar memoria no Pthread2\n");
+            fprintf(stderr, "Falha ao alocar na matriz\n");
             return -1;
+        }
+    }
+    
+    for (int i = 0; i < args.altura; i++){
+        for (int j = 0; j < args.largura; j++){
+            double cReal = pixelParaReal(j, args.largura);
+            double cImagem = pixelParaImagem(i, args.altura);
+            matrizIteracoes[i][j] = calculaIteracoes(cReal, cImagem, args.maxIteracoes);
         }
     }
 
     pthread_t thread[args.numeroThreads];
-    DadosThread dados[args.numeroThreads];
-    struct timespec inicio, fim;
-    clock_gettime(CLOCK_MONOTONIC, &inicio);
+    DadosNormalizacao dados[args.numeroThreads];
 
     for (int t = 0; t < args.numeroThreads; t++){
+        dados[t].matrizIteracoes = matrizIteracoes;
+        dados[t].matrizFinal = matriz;
         dados[t].linhaInicio = t;
         dados[t].passo = args.numeroThreads;
         dados[t].args = args;
-        dados[t].matriz = matriz;
-        pthread_create(&thread[t], NULL, calculaIntercalado, &dados[t]);
+        pthread_create(&thread[t], NULL, normalizaIntercalado, &dados[t]);
     }
 
     for (int t = 0; t < args.numeroThreads; t++){
@@ -159,9 +203,11 @@ int rodaPthreads2 (ArgumentosMandel args){
     fprintf(arquivoTempo, "Pthreads2: %fs\n", duracao);
     fclose(arquivoTempo);
 
-    for (int i = 0; i < args.altura; i++){
+    for (int i = 0; i <args.altura; i++){
+        free(matrizIteracoes[i]);
         free(matriz[i]);
     }
+    free(matrizIteracoes);
     free(matriz);
 
     return 0;
